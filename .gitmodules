@@ -1,7 +1,6 @@
-[submodule "backend"] 
-  path = "backend"
-  url = git@github.com:jorgemfo/PeddyBE.git
-
-[submodule "frontend"] 
-  path = "frontend"
-  url = git@github.com:jorgemfo/PeddyFE.git
+[submodule "backend"]
+	path = backend
+	url = git@github.com:jorgemfo/PeddyBE.git
+[submodule "frontend"]
+	path = frontend
+	url = git@github.com:jorgemfo/PeddyFE.git
