@@ -1,0 +1,98 @@
+{
+    "id": "1427c8c3-5062-4015-816c-a241182ccb64",
+    "displayName": "Peddy Application Login",
+    "realm": "peddy",
+    "sslRequired": "none",
+    "enabled": true,
+    "eventsEnabled": true,
+    "eventsExpiration": 900,
+    "adminEventsEnabled": true,
+    "adminEventsDetailsEnabled": true,
+    "attributes": {
+      "adminEventsExpiration": "900"
+    },
+    "roles": {
+      "realm": [
+        {
+          "id": "648755f7-14a9-40b7-b41c-84b1800541a3",
+          "name": "view-peddy",
+          "description": "Authorization to view Pedies",
+          "composite": false,
+          "clientRole": false,
+          "containerId": "1427c8c3-5062-4015-816c-a241182ccb64"
+        },
+        {
+          "id": "ff805070-808f-4ba4-8673-bcd4247249b2",
+          "name": "admin",
+          "description": "Generic admin role.",
+          "composite": false,
+          "clientRole": false,
+          "containerId": "1427c8c3-5062-4015-816c-a241182ccb64"
+        }
+      ]
+    },
+    "defaultRoles": [
+      "view-profile",
+      "view-peddy"
+    ],
+    "clients": [
+      {
+        "id": "peddy_fe",
+        "clientId": "peddy_fe",
+        "name": "peddy_fe",
+        "enabled": true,
+        "publicClient": true,
+        "rootUrl": "http://localhost/ui",
+        "adminUrl": "http://localhost/ui",
+        "baseUrl": "http://localhost/ui",
+        "redirectUris": [
+          "http://localhost/ui/*"
+        ],
+        "webOrigins": [
+          "http://localhost/ui"
+        ]
+      },
+      {
+        "id": "peddy_be",
+        "clientId": "peddy_be",
+        "name": "peddy_be",
+        "enabled": true,
+        "publicClient": true,
+        "rootUrl": "http://localhost:8080/api",
+        "adminUrl": "http://localhost:8080/api",
+        "baseUrl": "http://localhost:8080/api",
+        "redirectUris": [
+          "http://localhost:8080/api/*"
+        ],
+        "webOrigins": [
+          "http://localhost/api"
+        ]
+      }
+    ],
+    "users": [
+      {
+        "id": "peddy",
+        "email": "$admin@admin",
+        "username": "peddy",
+        "firstName": "DevOps",
+        "lastName": "SRE",
+        "enabled": true,
+        "emailVerified": true,
+        "credentials": [
+          {
+            "temporary": false,
+            "type": "password",
+            "value": "peddy"
+          }
+        ],
+        "clientRoles":{
+            "account":[
+              "view-peddy",
+              "view-profile"
+            ]
+        }
+      }
+    ]
+  }
+  
+  
