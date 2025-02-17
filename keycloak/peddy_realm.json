@@ -1,6 +1,6 @@
 {
     "id": "1427c8c3-5062-4015-816c-a241182ccb64",
-    "displayName": "Peddy Application Login",
+    "displayName": "Application Login",
     "realm": "peddy",
     "sslRequired": "none",
     "enabled": true,
@@ -42,31 +42,87 @@
         "name": "peddy_fe",
         "enabled": true,
         "publicClient": true,
-        "rootUrl": "http://localhost/ui",
-        "adminUrl": "http://localhost/ui",
-        "baseUrl": "http://localhost/ui",
+        "rootUrl": "https://diadamae2025.ddns.net/ui",
+        "adminUrl": "https://diadamae2025.ddns.net/ui",
+        "baseUrl": "https://diadamae2025.ddns.net/ui",
         "redirectUris": [
-          "http://localhost/ui/*"
+          "http://localhost/ui/*",
+          "http://localhost/ui/*",
+          "https://diadamae2025.ddns.net/ui/*"
         ],
         "webOrigins": [
-          "http://localhost/ui"
+          "http://localhost/ui",
+          "http://localhost/ui",
+          "https://diadamae2025.ddns.net/ui"
         ]
       },
       {
-        "id": "peddy_be",
         "clientId": "peddy_be",
         "name": "peddy_be",
+        "rootUrl": "https://diadamae2025.ddns.net/api",
+        "adminUrl": "https://diadamae2025.ddns.net/api",
+        "baseUrl": "https://diadamae2025.ddns.net/api",
+        "surrogateAuthRequired": false,
         "enabled": true,
-        "publicClient": true,
-        "rootUrl": "http://localhost:8080/api",
-        "adminUrl": "http://localhost:8080/api",
-        "baseUrl": "http://localhost:8080/api",
+        "alwaysDisplayInConsole": false,
+        "clientAuthenticatorType": "client-secret",
         "redirectUris": [
-          "http://localhost:8080/api/*"
+          "http://localhost:8080/api/*",
+          "http://localhost/api/*",
+          "https://diadamae2025.ddns.net/api/*"
         ],
         "webOrigins": [
-          "http://localhost/api"
-        ]
+          "http://localhost/api",
+          "http://localhost:8080/api/*",
+          "https://diadamae2025.ddns.net/api/*"
+        ],
+        "notBefore": 0,
+        "bearerOnly": false,
+        "consentRequired": false,
+        "standardFlowEnabled": true,
+        "implicitFlowEnabled": false,
+        "directAccessGrantsEnabled": false,
+        "serviceAccountsEnabled": true,
+        "publicClient": false,
+        "frontchannelLogout": false,
+        "protocol": "openid-connect",
+        "attributes": {
+          "realm_client": "false",
+          "post.logout.redirect.uris": "+",
+          "oauth2.device.authorization.grant.enabled": false,
+          "oidc.ciba.grant.enabled": false,
+          "login_theme": "",
+          "display.on.consent.screen": "false",
+          "consent.screen.text": "",
+          "backchannel.logout.url": "",
+          "backchannel.logout.session.required": "true",
+          "backchannel.logout.revoke.offline.tokens": "false"
+        },
+        "authenticationFlowBindingOverrides": {},
+        "fullScopeAllowed": true,
+        "nodeReRegistrationTimeout": -1,
+        "defaultClientScopes": [
+          "web-origins",
+          "acr",
+          "roles",
+          "profile",
+          "basic",
+          "email"
+        ],
+        "optionalClientScopes": [
+          "address",
+          "phone",
+          "organization",
+          "offline_access",
+          "microprofile-jwt"
+        ],
+        "access": {
+          "view": true,
+          "configure": true,
+          "manage": true
+        },
+        "description": "",
+        "authorizationServicesEnabled": true
       }
     ],
     "users": [
